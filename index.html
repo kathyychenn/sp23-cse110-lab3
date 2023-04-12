@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Users/kathychen/Downloads/Lab2_Starter/images/notes_favicon.png"/>
+    <link rel="icon" href="/images/notes_favicon.png"/>
     <title>Meeting Minutes</title>
   </head>
   <body>
@@ -43,7 +43,15 @@
                 <strong>Main Goal: Set dates for DEI Celebration events</strong>
             </p>
             <ul>
-                <li>DEI Leadership Program - interviews complete?</li>
+                <li>
+                    <details>
+                        <summary>DEI Leadership Program - interviews complete?</summary>
+                        <p>
+                            Undergraduate program for spring 23 quarter introducing 3 undergrad students 
+                            to the CSE DEI committee and facilitate onboarding undergrad members for next year.
+                        </p>
+                    </details> 
+                </li>
                 <li>Blazers from <b>Basic Needs</b>  for headshots</li>
                 <li>WIC x DEIComm movie night</li>
             </ul>
@@ -106,8 +114,67 @@
             Next Meeting date: 4/17/23 <br/>
             Location: CSE building
         </p>
-
-        <p>Feedback Form: </p>
+        <hr/>
+        <h4>Unrelated Form</h4>
+        <form>
+            <label>Enter your name: </label>
+            <input type="text">
+            <br/>
+            <label for="birthday">Enter your birthday: </label>
+            <input type="date" id="birthday" name="your-birthday"><br/>
+            <label>Are you a: </label>
+            <select name="status" id="status-select">
+                <option value="">--Please choose an option--</option>
+                <option value="student">Student</option>
+                <option value="professor">Professor</option>
+                <option value="staff">Staff</option>
+                <option value="other">Other</option>
+            </select>
+            <fieldset>
+                <legend>Which classes have you already taken?</legend>
+                <div>
+                    <input type="checkbox" id="cse11" name="cse11">
+                    <label for="cse11">CSE 11</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cse12" name="cse12">
+                    <label for="cse12">CSE 12</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cse20" name="cse20">
+                    <label for="cse11">CSE 20</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cse30" name="cse30">
+                    <label for="cse11">CSE 30</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Choose your favorite class</legend>
+                <input type="radio" id="cse12" name="class">
+                <label for="cse12">CSE 12</label><br/>
+                <input type="radio" id="cse100" name="class">
+                <label for="cse100">CSE 100</label><br/>
+                <input type="radio" id="cse110" name="class">
+                <label for="cse110">CSE 110</label><br/>
+            </fieldset><br/>
+            <label for="favoritecolor">Choose the best color:</label>
+            <input list="color-options" id="favoritecolor" name = "favoritecolor">
+            <datalist id="color-options">
+                <option value="green"></option>
+                <option value="red"></option>
+                <option value="blue"></option>
+            </datalist><br/>
+            <label for="feedback">Any feedback? Let us know!</label><br/>
+            <textarea id="feedback" name="feedback" rows="5" cols="33">feedback goes here...
+            </textarea>
+            <button>Submit</button>
+        </form>
       </main>
+
+      <footer>
+          <h6>CSE DEI Committee</h6>
+          <img src="images/laptop_banner.jpeg" alt="laptop banner" width="500"/>
+      </footer>
   </body>
 </html>
