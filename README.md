@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3
 
-[Meeting Minutes](https://kathyychenn.github.io/CSE110-Lab2/)
+[lab 3 page](https://kathyychenn.github.io/sp23-cse110-lab3/)
