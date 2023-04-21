@@ -2,6 +2,7 @@ h1{
     text-align: center;
     color: #ab0583;
     background-color: #e89ed7;
+    padding: top 5cm;
     
 }
 
@@ -10,7 +11,29 @@ body{
 }
 
 img{
-    border-width: 3px;
+    border-width: 5px;
     border-style: solid;
-    border-color: #a637a2;
+    border-color: pink;
+    border-radius: 2mm;
 }
+
+.box{
+    border-color: rgb(204, 44, 167);
+    border-width: 0.15cm;
+    border-style: solid;
+    border-radius: 40px;
+    background-color: rgb(255, 191, 240);
+
+    padding-top:15px;
+    padding-bottom:10px;
+    padding-left: 1.5cm;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+/**#agenda{
+    background-color: rgb(255, 191, 240);
+}*/
