@@ -1,12 +1,24 @@
+@font-face {
+    font-family: 'Roboto Mono', monospace;
+    src: url("RobotoMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Walter Turncoat';
+    src: url("WalterTurncoat-Regular.ttf");
+}
+
 h1{
     text-align: center;
     color: #ab0583;
     background-color: #e89ed7;
     padding: top 5cm;
-    
+    font-family: 'Walter Turncoat';
+    font-size: 5ex;
 }
 
 body{
+    font-family: 'Roboto Mono', monospace;
     color: #7a055e;
 }
 
@@ -32,6 +44,14 @@ img{
     margin-bottom: 20px;
     margin-left:10px;
     margin-right:10px;
+}
+
+input:focus{
+    background-color: lightpink;
+}
+
+button:active{
+    color: pink;
 }
 
 /**#agenda{
