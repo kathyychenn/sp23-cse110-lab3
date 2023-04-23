@@ -8,6 +8,51 @@
     src: url("WalterTurncoat-Regular.ttf");
 }
 
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    
+    list-style: none;
+    margin: 0; 
+    background: hsl(314, 59%, 40%);
+    position: sticky;
+    top: 0px;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.navigation a:hover {
+    background: #7a055e;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .navigation a { 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255,0.3); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
 h1{
     text-align: center;
     text-decoration: underline;
@@ -35,6 +80,16 @@ img{
     border-radius: 2mm;
 }
 
+#agenda > img{
+    border-width: 0px;
+    position: absolute;
+    right: 7cm;
+}
+
+li[class="check"]{
+    text-decoration: underline dotted;
+}
+
 .box, #meetingnotes{
     border-width: 0.15cm;
     border-style: solid;
@@ -58,6 +113,7 @@ img{
 .item-a{
     grid-area: header;
     align-self: center;
+    min-width: 200px;
 }
 
 .item-b{
@@ -85,6 +141,7 @@ img{
     background-color: #fcf7cc;
 
     padding: 10px 10px 20px 20px;
+    margin: auto;
 
     display: grid;
     grid-template-columns: 1fr,1fr,1fr,1fr,1fr;
@@ -93,52 +150,22 @@ img{
     grid-template-areas: 
         "header header header header header"
         "main1 main2 main3 main4 main5";
+} 
+
+#meetingnotes ~ h3{
+    text-align: left;
 }
 
-.navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    
-    list-style: none;
-    margin: 0; 
-    background: #a12985;
-    position: sticky;
-    top: 0px;
-  }
-  
-  .navigation a {
-    display: block;
-    padding: 1em;
-    color: white;
-  }
-  
-  .navigation a:hover {
-    background: #7a055e;
-  }
-  
-  @media all and (max-width: 800px) {
-    .navigation {
-      justify-content: space-around;
-    }
-  }
-  
-  @media all and (max-width: 600px) {
-    .navigation {
-      flex-flow: column wrap;
-      padding: 0;
-    }
-    .navigation a { 
-      text-align: center; 
-      padding: 10px;
-      border-top: 1px solid rgba(255, 255, 255,0.3); 
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-    }
-    .navigation li:last-of-type a {
-      border-bottom: none;
-    }
-  }
+#meetingnotes + p{
+    font-weight: bold;
+    color:#b61f93;
+    background-color: #f5cbeb;
+    padding: .5em;
+}
 
+*.message{
+    background-color: rgb(255, 219, 224);
+}
 
 input:focus{
     background-color: lightpink;
@@ -148,6 +175,7 @@ button:active{
     color: pink;
 }
 
-/**#agenda{
-    background-color: rgb(255, 191, 240);
-}*/
+fieldset.form{
+    width: 10cm;
+    display: inline-block;
+}
