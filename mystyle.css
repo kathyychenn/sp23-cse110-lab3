@@ -10,6 +10,7 @@
 
 h1{
     text-align: center;
+    text-decoration: underline;
     color: #ab0583;
     background-color: #e89ed7;
     padding: top 5cm;
@@ -29,22 +30,68 @@ img{
     border-radius: 2mm;
 }
 
-.box{
-    border-color: rgb(204, 44, 167);
+.box, #meetingnotes{
     border-width: 0.15cm;
     border-style: solid;
     border-radius: 40px;
-    background-color: rgb(255, 191, 240);
-
-    padding-top:15px;
-    padding-bottom:10px;
-    padding-left: 1.5cm;
 
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left:10px;
     margin-right:10px;
 }
+
+.box{    
+    border-color: rgb(204, 44, 167);
+    background-color: rgb(255, 191, 240);
+
+    padding-top:15px;
+    padding-bottom:10px;
+    padding-left: 1.5cm;
+}
+
+.item-a{
+    grid-area: header;
+    text-align: center;
+    align-self: center;
+}
+
+.item-b{
+    grid-area: main1;
+}
+
+.item-c{
+    grid-area: main2;
+}
+
+.item-d{
+    grid-area: main3;
+}
+
+.item-e{
+    grid-area: main4;
+}
+
+.item-f{
+    grid-area: main5;
+}
+
+#meetingnotes{
+    border-color: #fae292;
+    background-color: #fcf7cc;
+
+    padding: 10px 10px 20px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr,1fr,1fr,1fr,1fr;
+    column-gap: 30px;
+    grid-template-rows: 2em 2lh;
+    grid-template-areas: 
+        "header header header header header"
+        "main1 main2 main3 main4 main5";
+}
+
+
 
 input:focus{
     background-color: lightpink;
