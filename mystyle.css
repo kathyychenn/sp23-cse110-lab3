@@ -1,3 +1,4 @@
+/* importing fonts */
 @font-face {
     font-family: 'Roboto Mono', monospace;
     src: url("RobotoMono-Regular.ttf");
@@ -9,7 +10,7 @@
 }
 
 
-.navigation {
+.navigation { /* set position and background flexbox for nav bar*/
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -21,23 +22,23 @@
     top: 0px;
 }
 
-.navigation a {
+.navigation a { /* set display for each nav bar option */
     display: block;
     padding: 1em;
     color: white;
 }
 
-.navigation a:hover {
+.navigation a:hover { /* magenta when mouse hover over each nav option*/
     background: #7a055e;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 800px) { /* display options for medium width screens */
     .navigation {
         justify-content: space-around;
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 600px) {  /* display options for small width screens */
     .navigation {
         flex-flow: column wrap;
         padding: 0;
@@ -53,7 +54,7 @@
     }
 }
 
-h1{
+h1{ /* header formatting for h1 */
     text-align: center;
     text-decoration: underline;
     color: #ab0583;
@@ -63,34 +64,34 @@ h1{
     font-size: 5ex;
 }
 
-h3{
+h3{ /* header formatting for h3 */
     text-align: center;
     text-decoration:underline;
 }
 
-body{
+body{ /* font and color of body text */
     font-family: 'Roboto Mono', monospace;
     color: #7a055e;
 }
 
-img{
+img{ /* img borders */
     border-width: 5px;
     border-style: solid;
     border-color: pink;
     border-radius: 2mm;
 }
 
-#agenda > img{
+#agenda > img{ /* position and no border for calendar img in agenda section */
     border-width: 0px;
     position: absolute;
     right: 7cm;
 }
 
-li[class="check"]{
+li[class="check"]{ /* text for checkbox list */
     text-decoration: underline dotted;
 }
 
-.box, #meetingnotes{
+.box, #meetingnotes{ /* position and background/border formatting for meeting notes and agenda */
     border-width: 0.15cm;
     border-style: solid;
     border-radius: 40px;
@@ -101,7 +102,7 @@ li[class="check"]{
     margin-right:10px;
 }
 
-.box{    
+.box{ /* specific box settings for agenda section */   
     border-color: rgb(204, 44, 167);
     background-color: rgb(255, 191, 240);
 
@@ -110,33 +111,29 @@ li[class="check"]{
     padding-left: 1.5cm;
 }
 
+/* grid items for meeting notes grid container */
 .item-a{
     grid-area: header;
     align-self: center;
     min-width: 200px;
 }
-
 .item-b{
     grid-area: main1;
 }
-
 .item-c{
     grid-area: main2;
 }
-
 .item-d{
     grid-area: main3;
 }
-
 .item-e{
     grid-area: main4;
 }
-
 .item-f{
     grid-area: main5;
 }
 
-#meetingnotes{
+#meetingnotes{ /* specific grid container settings for meetingnotes section */ 
     border-color: #fae292;
     background-color: #fcf7cc;
 
@@ -152,30 +149,31 @@ li[class="check"]{
         "main1 main2 main3 main4 main5";
 } 
 
-#meetingnotes ~ h3{
+#meetingnotes ~ h3{ /* any h3 after meeting notes left text aligned */
     text-align: left;
 }
 
-#meetingnotes + p{
+#meetingnotes + p{ /* p text right after meeting notes is highlighted */
     font-weight: bold;
     color:#b61f93;
     background-color: #f5cbeb;
     padding: .5em;
 }
 
-*.message{
+*.message{ /* light pink background for all messages */
     background-color: rgb(255, 219, 224);
 }
 
-input:focus{
+input:focus{ /* color when typing input text */
     background-color: lightpink;
 }
 
-button:active{
+button:active{ /* submit button text turns pink when clicked */
     color: pink;
 }
 
-fieldset.form{
+fieldset.form{ /* align text input forms horizontally */
     width: 10cm;
+    height: 3cm;
     display: inline-block;
 }
