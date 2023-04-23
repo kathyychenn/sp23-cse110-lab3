@@ -26,7 +26,7 @@
             width="150"
           />
 
-        <section>
+        <section style="display:inline;">
             <h4 id="attendance">Attendance:</h4>
             <ul>
                 <li>Audria</li>
@@ -36,8 +36,14 @@
             </ul>
         </section>
         <hr/>
-        <section class="box">
-            <h2 style="text-align:center;text-decoration:underline;", id="agenda">AGENDA</h2>
+        <section class="box", id="agenda">
+            <h2 style="text-align:center;text-decoration:underline;position:static">AGENDA</h2>
+            <img
+                src="images/calendar.jpeg"
+                alt = "pink calendar"
+                width = "250px"
+                height = "250px"
+            >
             <p>
                 <strong>Main Goal: Set dates for DEI Celebration events</strong>
             </p>
@@ -55,20 +61,19 @@
                 <li>WIC x DEIComm movie night</li>
             </ul>
             <br/>
-
             <div class="my-list">
                 <p><strong>New business to discuss:</strong></p>
                 <ul>
-                    <li><input type="checkbox" />Dates for Land Acknowledgement Workshop
+                    <li class="check"><input type="checkbox"/>Dates for Land Acknowledgement Workshop
                         <ul>
                             <li>May 10, 2023 @ 3pm</li>
                             <li>May 11, 2023 @ 2pm</li>
                             <li>May 8, 2023 @ 4pm</li>
                         </ul>
                     </li>
-                    <li><input type="checkbox" />Activities for Leadership Program</li>
+                    <li class="check"><input type="checkbox"/>Activities for Leadership Program</li>
                 </ul>
-            </div>
+            </div>            
         </section>
         <hr/>
         <h1>Meeting Notes</h1>
@@ -90,50 +95,54 @@
                 <p class = "item-f">Social media promotion</p>
         </section>
 
-        <section>
-            <h3 style="text-align:left;">Comments/questions/concerns</h3>
-            <ol>
-                <li>Funding for dinner</li>
-                <li>Finding speaker</li>
-            </ol>
-        </section>
-        
-        <section>
-            <h4>Recordings</h4>
-            <ul>
-                <li>
-                    <figure>
-                        <figcaption>Audio:</figcaption>
-                        <audio
-                            controls
-                            src="/video/lab2audio.mp3">
-                                <a href="/video/lab2audio.mp3">
-                                    Download audio
-                                </a>
-                        </audio>
-                    </figure>                     
-                </li> 
-                <li>Video: <br/>
-                    <video controls
-                        src="video/lab2video.mp4"
-                        width="300">
-                    </video>
-                </li>
-            </ul>
-        </section>
+        <p>Overall this meeting reviewed our current plans for the upcoming spring quarter in regards to the leadership program, the celebratory series, and future events.</p>
+        <p>Budget planning will be reviewed by Lovella and Niha will continue emailing/communicating w various org representatives</p>
 
-        <p>
+        <h3>Comments/questions/concerns</h3>
+        <ol>
+            <li>Funding for dinner</li>
+            <li>Finding speaker</li>
+        </ol>
+        <figure>
+            <figcaption>Audio:</figcaption>
+            <audio
+                controls
+                src="/video/lab2audio.mp3">
+                    <a href="/video/lab2audio.mp3">
+                        Download audio
+                    </a>
+            </audio>
+        </figure> 
+        
+        <figure>
+            <figcaption>Video:</figcaption>
+            <video 
+                controls
+                src="video/lab2video.mp4"
+                width="300">
+            </video>
+        </figure>
+                
+
+        <p  class="message">
             Next Meeting date: 4/17/23 <br/>
             Location: CSE building
         </p>
+        
         <hr/>
-        <h4>Unrelated Form</h4>
+        <h3>Unrelated Form</h3>
         <form>
             <label>Enter your name: </label>
             <input type="text">
-            <br/>
             <label for="birthday">Enter your birthday: </label>
-            <input type="date" id="birthday" name="your-birthday"><br/>
+            <input type="date" id="birthday" name="your-birthday">
+            <label for="favoritecolor">Choose the best color:</label>
+            <input list="color-options" id="favoritecolor" name = "favoritecolor">
+            <datalist id="color-options">
+                <option value="green"></option>
+                <option value="red"></option>
+                <option value="blue"></option>
+            </datalist>
             <label>Are you a: </label>
             <select name="status" id="status-select">
                 <option value="">--Please choose an option--</option>
@@ -142,7 +151,7 @@
                 <option value="staff">Staff</option>
                 <option value="other">Other</option>
             </select>
-            <fieldset>
+            <fieldset class="form">
                 <legend>Which classes have you already taken?</legend>
                 <div>
                     <input type="checkbox" id="cse11" name="cse11">
@@ -161,7 +170,7 @@
                     <label for="cse11">CSE 30</label>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form">
                 <legend>Choose your favorite class</legend>
                 <input type="radio" id="cse8a" name="class">
                 <label for="cse8a">CSE 8a</label><br/>
@@ -170,13 +179,7 @@
                 <input type="radio" id="cse110" name="class">
                 <label for="cse110">CSE 110</label><br/>
             </fieldset><br/>
-            <label for="favoritecolor">Choose the best color:</label>
-            <input list="color-options" id="favoritecolor" name = "favoritecolor">
-            <datalist id="color-options">
-                <option value="green"></option>
-                <option value="red"></option>
-                <option value="blue"></option>
-            </datalist><br/>
+            
             <label for="feedback">Any feedback? Let us know!</label><br/>
             <textarea id="feedback" name="feedback" rows="5" cols="33">feedback goes here...
             </textarea>
@@ -186,6 +189,7 @@
 
       <footer>
           <h6>CSE DEI Committee</h6>
+          <p style="display:none;">hidden text in the footer shhh</p>
           <img src="images/laptop_banner.jpeg" alt="laptop banner" width="500"/>
       </footer>
   </body>
