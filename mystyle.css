@@ -10,11 +10,17 @@
 
 h1{
     text-align: center;
+    text-decoration: underline;
     color: #ab0583;
     background-color: #e89ed7;
     padding: top 5cm;
     font-family: 'Walter Turncoat';
     font-size: 5ex;
+}
+
+h3{
+    text-align: center;
+    text-decoration:underline;
 }
 
 body{
@@ -29,22 +35,110 @@ img{
     border-radius: 2mm;
 }
 
-.box{
-    border-color: rgb(204, 44, 167);
+.box, #meetingnotes{
     border-width: 0.15cm;
     border-style: solid;
     border-radius: 40px;
-    background-color: rgb(255, 191, 240);
-
-    padding-top:15px;
-    padding-bottom:10px;
-    padding-left: 1.5cm;
 
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left:10px;
     margin-right:10px;
 }
+
+.box{    
+    border-color: rgb(204, 44, 167);
+    background-color: rgb(255, 191, 240);
+
+    padding-top:15px;
+    padding-bottom:10px;
+    padding-left: 1.5cm;
+}
+
+.item-a{
+    grid-area: header;
+    align-self: center;
+}
+
+.item-b{
+    grid-area: main1;
+}
+
+.item-c{
+    grid-area: main2;
+}
+
+.item-d{
+    grid-area: main3;
+}
+
+.item-e{
+    grid-area: main4;
+}
+
+.item-f{
+    grid-area: main5;
+}
+
+#meetingnotes{
+    border-color: #fae292;
+    background-color: #fcf7cc;
+
+    padding: 10px 10px 20px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr,1fr,1fr,1fr,1fr;
+    column-gap: 30px;
+    grid-template-rows: 2em 2lh;
+    grid-template-areas: 
+        "header header header header header"
+        "main1 main2 main3 main4 main5";
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    
+    list-style: none;
+    margin: 0; 
+    background: #a12985;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .navigation a {
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background: #7a055e;
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
 
 input:focus{
     background-color: lightpink;
